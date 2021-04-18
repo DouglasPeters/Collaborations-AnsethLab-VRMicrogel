@@ -34,7 +34,7 @@ cd(Folder);
 srcFiles = dir('*.nd2');
 
 START = 1;
-FINISH = length(srcFiles);
+FINISH = 1; %length(srcFiles);
 
 %% Analysis %%
 
@@ -474,5 +474,5 @@ end %%End Analysis Loop for Image.
  disp('Collating results and saving to .mat file...');
  cd(Folder); cd Analysis; mkdir('ErosionAnalysisResults'); cd ErosionAnalysisResults;
  save('ErosionAnalysisResults.mat','ErosionProps','-v7.3');
- if CoExpressionAnalyis>0, save('CoExpressionAnalysisResults.mat','CoEx','-v7.3'); else end
+ if CoExpressionAnalysis>0, save('CoExpressionAnalysisResults.mat','CoEx','-v7.3'); else end
     
